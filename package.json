@@ -1,0 +1,43 @@
+{
+  "name": "npm-base",
+  "version": "1.0.0",
+  "description": "A base NPM package for writing a NPM package in ES2015",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kadirahq/npm-base.git"
+  },
+  "license": "MIT",
+  "options": {
+    "mocha": "--require scripts/mocha_runner lib/**/__tests__/**/*.js"
+  },
+  "scripts": {
+    "prepublish": ". ./scripts/prepublish.sh",
+    "lint": "eslint ./lib",
+    "lintfix": "eslint ./lib --fix",
+    "testonly": "mocha $npm_package_options_mocha",
+    "test": "npm run lint && npm run testonly"
+  },
+  "devDependencies": {
+    "nodemon": "*",
+    "mocha": "*",
+    "chai": "*",
+    "eslint": "*",
+    "babel-eslint": "*",
+    "eslint-plugin-babel": "*",
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-polyfill": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-stage-2": "*",
+    "babel-plugin-transform-runtime": "*"
+  },
+  "dependencies": {
+    "babel-runtime": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/kadirahq/npm-base/issues"
+  },
+  "homepage": "https://github.com/kadirahq/npm-base#readme",
+  "main": "index.js",
+  "author": ""
+}
