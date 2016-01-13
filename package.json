@@ -1,10 +1,10 @@
 {
-  "name": "npm-base",
+  "name": "mdp-learning",
   "version": "1.0.0",
-  "description": "A base NPM package for writing a NPM package in ES2015",
+  "description": "A library for building markov decision processes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kadirahq/npm-base.git"
+    "url": "git+https://github.com/rauljordan/mdp-learning.git"
   },
   "license": "MIT",
   "options": {
@@ -35,9 +35,9 @@
     "babel-runtime": "*"
   },
   "bugs": {
-    "url": "https://github.com/kadirahq/npm-base/issues"
+    "url": "https://github.com/rauljordan/mdp-learn/issues"
   },
-  "homepage": "https://github.com/kadirahq/npm-base#readme",
+  "homepage": "https://github.com/rauljordan/mdp-learne#readme",
   "main": "index.js",
-  "author": ""
+  "author": "Raul E. Jordan"
 }
