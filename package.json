@@ -1,6 +1,6 @@
 {
   "name": "mdp-learning",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A library for building markov decision processes",
   "repository": {
     "type": "git",
@@ -29,10 +29,12 @@
     "babel-polyfill": "*",
     "babel-preset-es2015": "*",
     "babel-preset-stage-2": "*",
-    "babel-plugin-transform-runtime": "*"
+    "babel-plugin-transform-runtime": "*",
+    "underscore":"*"
   },
   "dependencies": {
-    "babel-runtime": "*"
+    "babel-runtime": "*",
+    "underscore":"*"
   },
   "bugs": {
     "url": "https://github.com/rauljordan/mdp-learn/issues"
