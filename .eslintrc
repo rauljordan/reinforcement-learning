@@ -120,7 +120,6 @@
     "no-loop-func": 0,
     "no-mixed-requires": [2, true],
     "no-mixed-spaces-and-tabs": 2,
-    "no-multi-spaces": 2,
     "no-multi-str": 2,
     "no-multiple-empty-lines": 0,
     "no-native-reassign": 0,
