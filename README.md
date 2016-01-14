@@ -2,8 +2,6 @@
 
 Markov Decision Processes Implemented in Javascript!
 
----
-
 This package implements an MDP with common functions using dynamic programming in javascript such as policy iteration and value iteration. Currently in early stages.
 
 ## Basic Usage
@@ -13,4 +11,4 @@ This package implements an MDP with common functions using dynamic programming i
 
 ## Kudos
 
-* Implemented from AIMA 
+* Implemented from AIMA
