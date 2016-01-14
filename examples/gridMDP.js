@@ -3,7 +3,7 @@ import {_} from 'underscore';
 
 class GridMDP extends MDP {
   constructor(grid, terminals, init = [0, 0], gamma = 0.9) {
-    super(init, [[[0, 1], [0, -1], [1, 0], [-1, 0]]], terminals, gamma);
+    super(init, [[0, 1], [0, -1], [-1, 0], [1, 0]], terminals, gamma);
     grid.reverse();
     this.grid = grid;
     this.rows = grid.length;
@@ -17,17 +17,19 @@ class GridMDP extends MDP {
   }
   T (state, action) {
     return [{p: 0.8, state: this.go(state, action)},
-            {p: 0.1, state: this.go(state, this.turnRight(action))},
-            {p: 0.1, state: this.go(state, this.turnRight(action))}];
+            {p: 0.1, state: this.turnRight(state)},
+            {p: 0.1, state: this.turnLeft(state)}];
   }
   go (state, direction) {
-    var s_prime = utils.vectorAdd(state, direction)
-    if (_.contains(this.states, state)) {
-      return s_prime;
-    }
-    else {
-      return state;
-    }
+    var result = state
+
+    this.states.map(s => {
+      if (arraysEqual(s, state)) {
+        result = utils.vectorAdd(state, direction);
+      }
+    });
+
+    return result;
   }
   turnRight(state) {
     return utils.vectorAdd(state, [1, 0]);
@@ -43,7 +45,4 @@ var mdp = new GridMDP([[-0.04, -0.04, -0.04, +1],
                      [-0.04, -0.06,  -0.04, -1],
                      [-0.04, -0.04, -0.04, -0.04]],
                      terminals);
-
-var pi = policyIteration(mdp);
-
-console.log(pi);
+console.log(policyIteration(mdp));
