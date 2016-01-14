@@ -1,10 +1,10 @@
 {
-  "name": "mdp-learning",
+  "name": "reinforcement-learning",
   "version": "1.0.4",
-  "description": "A library for building markov decision processes",
+  "description": "A library for complete reinforcement-learning problem solving in javascript es6",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rauljordan/mdp-learning.git"
+    "url": "git+https://github.com/rauljordan/reinforcement-learning.git"
   },
   "license": "MIT",
   "options": {
@@ -36,9 +36,9 @@
     "underscore":"*"
   },
   "bugs": {
-    "url": "https://github.com/rauljordan/mdp-learn/issues"
+    "url": "https://github.com/rauljordan/reinforcement-learning/issues"
   },
-  "homepage": "https://github.com/rauljordan/mdp-learne#readme",
+  "homepage": "https://github.com/rauljordan/reinforcement-learning#readme",
   "main": "index.js",
   "author": "Raul E. Jordan"
 }

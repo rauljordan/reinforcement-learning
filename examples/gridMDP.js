@@ -1,5 +1,4 @@
-import {MDP, policyIteration, utils} from '../';
-import {_} from 'underscore';
+import {MDP, valueIteration, utils} from '../';
 
 class GridMDP extends MDP {
   constructor(grid, terminals, init = [0, 0], gamma = 0.9) {
@@ -45,4 +44,3 @@ var mdp = new GridMDP([[-0.04, -0.04, -0.04, +1],
                      [-0.04, -0.06,  -0.04, -1],
                      [-0.04, -0.04, -0.04, -0.04]],
                      terminals);
-console.log(policyIteration(mdp));

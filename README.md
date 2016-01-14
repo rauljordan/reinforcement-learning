@@ -1,12 +1,12 @@
-# MDP Learning
+# Reinforcement Learning
 
-Markov Decision Processes Implemented in Javascript!
+A complete library for reinforcement learning built entirely in Javascript es6!
 
-This package implements an MDP with common functions using dynamic programming in javascript such as policy iteration and value iteration. Currently in early stages.
+Specifically, This package implements methods to solve Markov Decision Processes using dynamic programming and iterative methods such as policy iteration and value iteration. Currently in early stages.
 
 ## Basic Usage
 
-* npm install mdp-learning
+* npm install reinforcement-learning
 
 
 ## Kudos
