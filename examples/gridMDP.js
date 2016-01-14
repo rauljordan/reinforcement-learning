@@ -24,7 +24,7 @@ class GridMDP extends MDP {
     var result = state
 
     this.states.map(s => {
-      if (arraysEqual(s, state)) {
+      if (utils.arraysEqual(s, state)) {
         result = utils.vectorAdd(state, direction);
       }
     });
