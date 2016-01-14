@@ -1,13 +1,5 @@
-import {MDP} from '../';
+import {MDP, policyIteration, utils} from '../';
 import {_} from 'underscore';
-
-export const vectorAdd = (x, y) => {
-  x.map((element, i) => {
-    y[i] = y[i] + x[i];
-  });
-
-  return y;
-};
 
 class GridMDP extends MDP {
   constructor(grid, terminals, init = [0, 0], gamma = 0.9) {
@@ -29,7 +21,7 @@ class GridMDP extends MDP {
             {p: 0.1, state: this.go(state, this.turnRight(action))}];
   }
   go (state, direction) {
-    var s_prime = vectorAdd(state, direction)
+    var s_prime = utils.vectorAdd(state, direction)
     if (_.contains(this.states, state)) {
       return s_prime;
     }
@@ -38,10 +30,10 @@ class GridMDP extends MDP {
     }
   }
   turnRight(state) {
-    return vectorAdd(state, [1, 0]);
+    return utils.vectorAdd(state, [1, 0]);
   }
   turnLeft(state) {
-    return vectorAdd(state, [-1, 0]);
+    return utils.vectorAdd(state, [-1, 0]);
   }
 }
 
@@ -52,5 +44,6 @@ var mdp = new GridMDP([[-0.04, -0.04, -0.04, +1],
                      [-0.04, -0.04, -0.04, -0.04]],
                      terminals);
 
+var pi = policyIteration(mdp);
 
-console.log(mdp);
+console.log(pi);
